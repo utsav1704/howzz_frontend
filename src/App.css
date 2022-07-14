@@ -1,38 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Rubik&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  /* font-family: "Noto Sans", sans-serif; */
+}
+
+h1 {
+  font-weight: 600;
+}
+
 .App {
+  height: 100vh;
+  background-color: #7182c2;
+}
+
+.homePage {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.homePage .loginDiv {
+  padding: 0 20px;
+}
+
+.homePage .imgDiv {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homePage .imgDiv h1 {
+  margin: 15px 0;
+}
+.chatImg {
+  width: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.signUpForm {
+  width: 100vw;
+  padding: 10px calc(100vw - 75vw);
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.customFileInput {
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 1;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#imgLabel {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+  background-color: white;
 }
