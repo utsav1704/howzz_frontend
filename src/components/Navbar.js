@@ -6,8 +6,8 @@ export default function Navbar() {
     <div>
       <nav className="navbar bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">Howzz</a>
-          <h3 className="btn btn-outline-dark"><Link to="/signup">SignUp</Link></h3>
+          <Link className="navbar-brand chat_apk_name" to="/">Howzz</Link>
+          <h3 style={{paddingTop : '5px'}}><Link to="/signup" className="signup">Signup</Link></h3>
         </div>
       </nav>
     </div>

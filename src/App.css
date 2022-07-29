@@ -17,9 +17,11 @@ h1 {
 
 .homePage {
   margin-top: 80px;
+  padding-bottom: 72px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 
 .homePage .loginDiv {
   padding: 0 20px;
@@ -36,13 +38,51 @@ h1 {
   width: 300px;
 }
 
+.line {
+  display: none;
+}
+
 .signUpForm {
   width: 100vw;
-  padding: 10px calc(100vw - 75vw);
+  padding: 9.5px calc(100vw - 75vw);
+}
+
+.signup {
+  text-decoration: none;
+  font-size: 1.35rem;
+  color: white;
+  display: block;
+  padding: 7px 15px;
+  border: 1px solid white;
+  border-radius: 25%;
+}
+
+.signup:hover {
+  color: gray;
+}
+
+.create_account {
+  color: black;
+  text-decoration: none;
+}
+
+.create_account:hover {
+  color: black;
+}
+
+.chat_apk_name {
+  font-size: 25px;
+  color: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.welcome_user {
+  color: white;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 
 .customFileInput {
@@ -61,3 +101,314 @@ h1 {
   color: black;
   background-color: white;
 }
+
+.dashboard {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding-bottom: 50px;
+}
+
+.user_name {
+  font-size: 1.3rem;
+}
+
+.user_info {
+  display: none;
+}
+
+#users {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  position: absolute;
+  width: 210px;
+  top: 8.3vh;
+  right: 1.6vw;
+  max-height: 30vh;
+  z-index: 999;
+}
+
+#users p {
+  line-height: 10px;
+  margin: 17px 20px;
+}
+
+#users p:first-child {
+  margin: 15px 20px;
+}
+
+#users p:hover {
+  cursor: pointer;
+}
+
+.chatList {
+  margin-left: 15px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.chatList::-webkit-scrollbar{
+  display: none;
+}
+
+.chatList li {
+  list-style: none;
+  display: block;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.active {
+  color: #61dafb;
+  border-radius: 20%;
+}
+
+.chatList .logoutBtn{
+  position: absolute;
+  bottom: 3vh;
+}
+
+.receiverDetails p {
+  font-size: 25px;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+
+.chatContainer {
+  background-color: white;
+  border-radius: 10px;
+  height: 63vh;
+  width: 77vw;
+  padding: 10px 30px;
+}
+
+.chatContainer div:first-child{
+  margin-top: 5px;
+}
+
+.chatContainer .sent {
+  text-align: left;
+}
+
+.chatContainer span {
+  background-color: #61dafb;
+  color: black;
+  padding: 7px;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+.chatContainer .replied {
+  margin-right: 15px;
+  text-align: right;
+}
+
+/* .chatContainer div::-webkit-scrollbar{
+  display: none;
+} */
+
+.chatContainer .messages {
+  background-color: white;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  max-height: calc(100% - 10px);
+  min-height: calc(100% - 10px);
+  width: calc(100% + 25px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.chatContainer .messages::-webkit-scrollbar{
+  display: none;
+}
+
+.chatContainer .messages .blank {
+  display: none;
+}
+
+.sendForm {
+  position: absolute;
+  display: flex;
+  bottom: 3vh;
+  width: 77vw;
+}
+
+.sendForm input {
+  width: 72vw;
+}
+
+@media (max-width : 800px) {
+  .homePage {
+    grid-template-columns: 1fr;
+  }
+
+  .line {
+    display: block;
+  }
+
+  .signUpForm {
+    /* width: 100vw; */
+    padding: 9.5px calc(100vw - 90vw);
+  }
+
+  .bottom_div {
+    padding-bottom: 88px;
+  }
+
+  #users {
+    right: 2.6vw;
+  }
+}
+
+@media (max-width : 750px) {
+  .dashboard {
+    grid-template-columns: 0.5fr 4fr;
+  }
+
+  .chatList {
+    margin-left: 0;
+  }
+
+  .chatList ul {
+    margin-left: -20px;
+  }
+
+  .rightSide {
+    margin-left: 35px;
+  }
+
+  .chatList .logoutBtn {
+    left: 1.5vw;
+  }
+
+  #users {
+    right: 2.73vw;
+  }
+}
+
+@media (max-width : 650px) {
+  .chatList {
+    margin-left: 10px;
+    padding-right: 5px;
+  }
+  
+  .chatList ul{
+    margin-left: -15px;
+  }
+
+  .chatList ul li{
+    font-size: 0;
+  }
+
+  .chatList ul li::first-letter {
+    font-size: 2rem;
+    background-color: white;
+    padding: 0px 8px;
+    border-radius: 20%;
+  }
+
+  #users {
+    right: 3.15vw;
+  }
+}
+
+@media (max-width : 510px) {
+  .user_name {
+    display: none;
+  }
+
+  .user_info{
+    display: block;
+  }
+
+  .user_info h1{
+    display: none;
+  }
+
+  .chats {
+    font-size: 1rem;
+  }
+
+  .chatList ul{
+    margin-left: -30px;
+  }
+
+  .chatContainer {
+    padding: 7px 25px 7px 9px;
+    height: 48vh;
+  }
+
+  .chatContainer .messages {
+    max-height: calc(100%);
+    min-height: calc(100%);
+  }
+
+  .chatList .logoutBtn {
+    font-size: 0;
+    bottom: 1vh;
+    margin-left: 5px;
+  }
+
+  .chatList .logoutBtn::first-letter {
+    font-size: 1.5rem;
+  }
+
+  .sendForm {
+    bottom: 1vh;
+  }
+
+  .sendForm input {
+    width: 55vw;
+  }
+
+  #users {
+    right: 4.1vw;
+  }
+}
+
+@media (max-width : 450px) {
+  .chatList ul{
+    margin-left: -30px;
+  }
+
+  .chatList ul li::first-letter{
+    font-size: 1.5rem;
+  }
+
+  #users {
+    right: 4.5vw;
+  }
+}
+
+@media (max-width : 395px) {
+  .chatList ul li::first-letter{
+    font-size: 1.3rem;
+  }
+
+  #users {
+    right: 5.3vw;
+  }
+}
+
+@media (max-width : 375px) {
+  .chatList {
+    margin-left: 3px;
+  }
+
+  .chat_apk_name {
+    display: none;
+  }
+
+  .user_info h1{
+    display: block;
+  }
+
+  #users {
+    left: 3.3vw;
+    top: 9vh;
+  }
+}
+
+
