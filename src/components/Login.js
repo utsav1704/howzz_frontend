@@ -6,7 +6,7 @@ export default function Login() {
   const [user, setUser] = useState({});
   const [token, setToken] = useState("");
 
-  const baseUrl = process.env.REACT_APP_BASE_URl;
+  const baseUrl = process.env.REACT_APP_BASE_URL;
   let navigate = useNavigate();
   
   useEffect(() => {

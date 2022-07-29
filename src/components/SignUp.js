@@ -8,10 +8,10 @@ export default function SignUp() {
   let navigate = useNavigate();
   let imgName;
 
-  const cloudinaryUrl = "https://api.cloudinary.com/v1_1/dlbokp0mc/upload";
+  const cloudinaryUrl = process.env.REACT_APP_CLOUDINARY_IMAGE_UPLOAD_URL;
   
   useEffect(() => {
-    const baseUrl = process.env.REACT_APP_BASE_URl;
+    const baseUrl = process.env.REACT_APP_BASE_URL;
     // console.log("User == ",user);
     // console.log("Image == ",image);
     const sendDataToServer = async () => {

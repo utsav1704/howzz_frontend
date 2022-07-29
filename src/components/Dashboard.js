@@ -9,10 +9,9 @@ import SockJS from "sockjs-client";
 
 let stompClient = null;
 export default function Dashboard() {
-  const baseUrl = process.env.REACT_APP_BASE_URl;
-  const CHAT_SERVICE = "https://howzz-chat-service.herokuapp.com";
-  const IMAGE_URL =
-    "https://res.cloudinary.com/dlbokp0mc/image/upload/v1658475937/chat_webapp/";
+  const baseUrl = process.env.REACT_APP_BASE_URL;
+  const CHAT_SERVICE = process.env.REACT_APP_CHAT_SERVICE;
+  const IMAGE_URL = process.env.REACT_APP_CLOUDINARY_IMAGE_URL;
 
   const [user, setUser] = useState({});
   const [token, setToken] = useState("");
